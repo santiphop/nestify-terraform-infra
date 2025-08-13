@@ -43,16 +43,16 @@ module "ecs" {
   depends_on = [module.iam]
 }
 
-module "mongodb_ec2" {
-  source             = "./modules/mongodb_ec2"
-  security_group_id  = module.nsg.mongodb_sg_id
-  subnet_id          = module.vpc.public_subnets[0]
-  instance_type      = var.mongodb_instance_type
-  ami_id             = var.mongodb_ami_id
-  key_name           = var.ssh_key_name
-  project_name       = var.project_name
-  environment        = var.environment
-}
+# module "mongodb_ec2" {
+#   source             = "./modules/mongodb_ec2"
+#   security_group_id  = module.nsg.mongodb_sg_id
+#   subnet_id          = module.vpc.public_subnets[0]
+#   instance_type      = var.mongodb_instance_type
+#   ami_id             = var.mongodb_ami_id
+#   key_name           = var.ssh_key_name
+#   project_name       = var.project_name
+#   environment        = var.environment
+# }
 
 module "elasticache" {
   source             = "./modules/elasticache"

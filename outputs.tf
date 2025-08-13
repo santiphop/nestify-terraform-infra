@@ -6,9 +6,9 @@ output "ecs_cluster_id" {
   value = module.ecs.ecs_cluster_id
 }
 
-output "mongodb_endpoint" {
-  value       = module.mongodb_ec2.mongodb_endpoint
-}
+# output "mongodb_endpoint" {
+#   value       = module.mongodb_ec2.mongodb_endpoint
+# }
 
 output "s3_bucket_name" {
   value = module.s3.bucket_name

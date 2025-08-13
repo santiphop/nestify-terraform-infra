@@ -38,15 +38,15 @@ variable "ecs_cluster_name" {
   type        = string
 }
 
-variable "mongodb_instance_type" {
-  description = "Instance type for MongoDB EC2"
-  type        = string
-}
+# variable "mongodb_instance_type" {
+#   description = "Instance type for MongoDB EC2"
+#   type        = string
+# }
 
-variable "mongodb_ami_id" {
-  description = "AMI ID for MongoDB EC2"
-  type        = string
-}
+# variable "mongodb_ami_id" {
+#   description = "AMI ID for MongoDB EC2"
+#   type        = string
+# }
 
 variable "s3_bucket_name" {
   description = "Name for the S3 Bucket"
